@@ -1,4 +1,4 @@
-(* atscc -o exprs exprs.dats *)
+(* atscc -o exprs 3-exprs.dats *)
 
 val integral = 1 * 2
 

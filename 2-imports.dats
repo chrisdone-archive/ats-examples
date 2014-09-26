@@ -1,4 +1,4 @@
-(* atscc -o imports imports.dats *)
+(* atscc -o imports 2-imports.dats *)
 
 staload _ = "libc/SATS/stdio.sats"
 staload _ = "prelude/DATS/array.dats"
