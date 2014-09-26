@@ -7,6 +7,14 @@ val area =
   in pi * radius * radius
   end
 
+(* Alternatively, ‘where’ syntax can be used: *)
+val area =
+  pi * radius * radius
+  where {
+    val pi = 3.14
+    val radius = 10.0
+  }
+
 (* Main entry point. *)
 val _ = print area
 
