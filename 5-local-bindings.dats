@@ -25,6 +25,13 @@ in
   val area = pi * radius * radius
 end
 
+(* Use ‘and’ to make bindings share the same environment. *)
+val area =
+  let val pi = 3.14
+      and radius = 10.0
+  in pi * radius * radius
+  end
+
 (* Main entry point. *)
 val _ = print area
 
