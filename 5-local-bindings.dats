@@ -19,10 +19,10 @@ val area =
 (* Alternatively, to create many top-level bindings with the same *)
 (* scope, you can use ‘local’. *)
 local
-  val PI = 3.14
+  val pi = 3.14
   val radius = 10.0
 in
-  val area = PI * radius * radius
+  val area = pi * radius * radius
 end
 
 (* Main entry point. *)
