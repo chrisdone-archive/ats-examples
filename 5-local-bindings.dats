@@ -5,7 +5,7 @@ val area =
   let val pi = 3.14
       val radius = 10.0
   in pi * radius * radius
-end
+  end
 
 (* Main entry point. *)
 val _ = print area
