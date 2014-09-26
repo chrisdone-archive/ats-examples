@@ -25,9 +25,23 @@ fun sum2 (m : int, n : int) : int =
      then m + sum2 (m + 1, n)
      else 0
 
-(* Use the square function: *)
+(* Cleverer sum. *)
+fun sum3 (m : int, n : int) : int =
+  if m <= n
+     then let val mn2 = (m + n) / 2
+          in sum3 (m,mn2 - 1) + mn2 + sum3 (mn2 + 1,n)
+          end
+     else 0
+
+(* Use the sum1 function: *)
 val _ =
   begin print (sum1 10);
+        print "\n";
+  end
+
+(* Use the sum3 function: *)
+val _ =
+  begin print (sum3 (10,100));
         print "\n";
   end
 
