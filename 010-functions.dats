@@ -19,5 +19,4 @@ val _ = print (square 5.0)
 (* Use the areaOfRing function: *)
 val _ = print (areaOfRing (5.0,2.0))
 
-
 implement main () = ()
