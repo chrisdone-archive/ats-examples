@@ -33,6 +33,12 @@ fun sum3 (m : int, n : int) : int =
           end
      else 0
 
+(* Fibonacci. *)
+fun fib (n : int) : int =
+  if n >= 2
+     then fib (n - 1) + fib (n - 2)
+     else n
+
 (* Use the sum1 function: *)
 val _ =
   begin print (sum1 10);
@@ -52,6 +58,13 @@ val _ =
   end
 
 (* Use the areaOfRing function: *)
-val _ = print (areaOfRing (5.0,2.0))
+val _ =
+  begin print (areaOfRing (5.0,2.0));
+        print "\n";
+  end
+
+(* Use the fib function: *)
+val _ =
+  print (fib 10)
 
 implement main () = ()
