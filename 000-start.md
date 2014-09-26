@@ -12,9 +12,9 @@ learners can use it as a quick reference.
 The code samples are formatted according to my Haskelly aesthetic. ATS
 is notorious for looking very ugly. I suspect that this is almost
 entirely due to the crazy way in which the main ATS developers,
-including the author of *Introduction to Programming in ATS*, format
-their code. In reformatting these code samples, I hope to prove to
-others (and myself) that ATS can be beautiful.
+including the author of *Introduction to Programming in ATS*, Hongwei
+Xi, format their code. In reformatting these code samples, I hope to
+prove to others (and myself) that ATS can be beautiful.
 
 ### Compiling the examples
 
