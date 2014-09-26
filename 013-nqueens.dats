@@ -1,6 +1,7 @@
 (* N-queens problem. *)
 
-#define N 8
+(* Board size. *)
+val size : int = 8
 
 (* Define an 8-tuple of ints. *)
 typedef Int8 = (int,int,int,int,int,int,int,int)
@@ -17,7 +18,7 @@ fun printRow (i : int) : void =
   begin
     printDots i;
     print "Q ";
-    printDots (N - i - 1);
+    printDots (size - i - 1);
     print "\n";
   end
 
@@ -80,12 +81,12 @@ fun canCaptureLess (i0: int,j0: int,bd: Int8,i: int) : bool =
 
 (* Search for and print all solutions. *)
 fun search (bd : Int8,i: int,j: int,nsol: int) : int =
-  if j < N
+  if j < size
      then
        if canCaptureLess (i,j,bd,i-1)
           then
             let val bd1 = boardSet (bd,i,j)
-            in if i+1 = N
+            in if i+1 = size
                   then begin
                          print! ("This is solution no. ",nsol + 1,":\n\n");
                          printBoard bd1;
