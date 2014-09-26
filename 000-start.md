@@ -13,7 +13,10 @@ The code samples are formatted according to my Haskelly aesthetic. ATS
 is notorious for looking very ugly. I suspect that this is almost
 entirely due to the crazy way in which the main ATS developers,
 including the author of *Introduction to Programming in ATS*, Hongwei
-Xi, format their code. In reformatting these code samples, I hope to
+Xi, format their code. For comparison
+[see here](https://gist.github.com/chrisdone/3cbda530e525addb1dc3). The
+“// end of foo” comments seem to be a way of making up for the
+difficult to read style. In reformatting these code samples, I hope to
 prove to others (and myself) that ATS can be beautiful.
 
 ### Compiling the examples
