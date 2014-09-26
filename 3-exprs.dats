@@ -1,5 +1,3 @@
-(* atscc -o exprs 3-exprs.dats *)
-
 (* Examples of expression types. *)
 
 (* Integrals are like this. *)

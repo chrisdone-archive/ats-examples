@@ -1,7 +1,3 @@
-(* atscc -o finalization 4-finalization.dats *)
-
-(* Examples of finalization order. *)
-
 (* No guarantee of order for finalization for PI and radius. *)
 val PI = 3.14 and radius = 10.0
 

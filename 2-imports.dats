@@ -1,5 +1,3 @@
-(* atscc -o imports 2-imports.dats *)
-
 (* Import some prelude-like functions. *)
 
 staload _ = "libc/SATS/stdio.sats"
