@@ -3,7 +3,7 @@
 (* Tuple syntax. *)
 val xyz = ('A',1,2.0)
 
-(* Tuple slots are access via their indexes. *)
+(* Tuple slots are accessed via their indexes. *)
 val x = xyz.0
 and y = xyz.1
 and z = xyz.2
