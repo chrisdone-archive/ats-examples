@@ -78,7 +78,7 @@ fun canCaptureLess (i0: int,j0: int,bd: Int8,i: int) : bool =
              else false
      else true
 
-(* Search for a solution. *)
+(* Search for all solutions. *)
 fun search (bd : Int8,i: int,j: int,nsol: int) : int =
   if j < N
      then
