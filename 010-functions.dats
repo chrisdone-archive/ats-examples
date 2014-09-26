@@ -1,16 +1,16 @@
 (* Functions. *)
 
 (* Define a non-recursive symbol x² function. *)
-fn square (x: double): double =
+fn square (x : double) : double =
   x * x
 
 (* Anonymous function: *)
 val square =
-  lam (x: double): double =>
+  lam (x : double) : double =>
     x * x
 
 (* Defines a multi-argument function. *)
-fn areaOfRing (R: double, r: double): double =
+fn areaOfRing (R : double, r : double) : double =
   3.1416 * (square R - square r)
 
 (* Use the square function: *)
