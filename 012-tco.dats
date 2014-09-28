@@ -13,12 +13,13 @@ fun sum (n : int,acc : int) : int =
    you can use a local function.
 *)
 fun sum (n : int) : int =
-  let fun go (n : int, acc : int) : int =
+  go (n,0)
+  where {
+    fun go (n : int, acc : int) : int =
         if n > 0
            then go (n - 1,n + acc)
            else acc
-  in go (n,0)
-  end
+  }
 
 (* Example use: *)
 val _ = print (sum 10)

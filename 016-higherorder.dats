@@ -7,12 +7,13 @@
    function that does not have a root.
  *)
 fun rtfind (f : int -> int) : int =
-  let fun loop (f : int -> int,n : int) : int =
-        if f (n) = 0
-           then n
-           else loop (f,n + 1)
-  in loop (f,0)
-  end
+  loop (f,0)
+  where {
+    fun loop (f : int -> int,n : int) : int =
+      if f (n) = 0
+         then n
+         else loop (f,n + 1)
+  }
 
 (* An integer fold. *)
 fun ifold (n : int,f : (int,int) -> int,ini : int) : int =

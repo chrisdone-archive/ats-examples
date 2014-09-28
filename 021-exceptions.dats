@@ -7,17 +7,18 @@ datatype List (a : t@ype) =
 
 (* Product of a list of ints. *)
 fun listProd (xs : List int) : int =
-  let exception DivisionByZero of ()
-      fun aux (xs : List int) : int =
-        case xs of
-          | Cons (x,xs) =>
-            if x = 0
-               then $raise DivisionByZero()
-               else x * aux (xs)
-          | Nil => 1
-  in try aux (xs)
-     with ~DivisionByZero () => 0
-  end
+  (try go (xs)
+   with ~DivisionByZero () => 0)
+  where {
+    exception DivisionByZero of ()
+    fun go (xs : List int) : int =
+      case xs of
+        | Cons (x,xs) =>
+          if x = 0
+             then $raise DivisionByZero()
+             else x * go (xs)
+        | Nil => 1
+  }
 
 (* Demo of exception handling *)
 val _ =

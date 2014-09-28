@@ -31,13 +31,13 @@ fun charsLength (cs : ListChar) : int =
 
 (* Tail-recursive version of charsLength. *)
 fun charsLengthTCO (cs : ListChar) : int =
-  let fun go (cs : ListChar,n : int) : int =
-        case cs of
-          | ConsChar (_,cs) => go (cs,n + 1)
-          | NilChar ()      => n
-  in go (cs,0)
-  end
-
+  go (cs,0)
+  where {
+    fun go (cs : ListChar,n : int) : int =
+      case cs of
+        | ConsChar (_,cs) => go (cs,n + 1)
+        | NilChar ()      => n
+  }
 (* Is the given day a weekday? *)
 fun isWeekday (x : Day) : bool =
   case x of

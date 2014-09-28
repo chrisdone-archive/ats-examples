@@ -20,17 +20,18 @@ fun coinIndex (n : int) : int =
 
 (* Calculate change given by a number. *)
 fun coinChange (sum : int) =
-  let fun go (sum : int,n : int) : int =
-        if sum > 0
-           then if n >= 0
-                   then go (sum,n - 1) +
-                        go (sum - coinIndex (n),n)
-                   else 0
-           else if sum < 0
-                   then 0
-                   else 1
-  in go (sum,3)
-  end
+  go (sum,3)
+  where {
+    fun go (sum : int,n : int) : int =
+      if sum > 0
+         then if n >= 0
+                 then go (sum,n - 1) +
+                      go (sum - coinIndex (n),n)
+                 else 0
+         else if sum < 0
+                 then 0
+                 else 1
+  }
 
 (* Example usages: *)
 val _ =
