@@ -15,7 +15,7 @@ fun sum (n : int,acc : int) : int =
 fun sum (n : int) : int =
   go (n,0)
   where {
-    fun go (n : int, acc : int) : int =
+    fun go (n : int,acc : int) : int =
         if n > 0
            then go (n - 1,n + acc)
            else acc
