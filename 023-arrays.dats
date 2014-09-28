@@ -26,5 +26,4 @@ fun {a : t@ype} insertionSort (array : array0 (a),cmp : (a,a) -> int) : void =
          else ()
   }
 
-
 implement main () = ()
