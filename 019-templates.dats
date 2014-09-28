@@ -18,6 +18,14 @@ typedef Compose (f : t@ype, g : t@ype) =
   f -<cloref1> g
 (*  ^ Yep, that's also real. *)
 
+(* Identity on boxed types. *)
+fun {a : type} identB (x : a) : a = x
+
+(* Identity on unboxed types. *)
+fun {a : t@ype} identU (x : a) : a = x
+
+val _ = identU (123 : int)
+
 (* In Haskell this type is like:
 
    (.) :: (b -> c) -> (a -> b) -> (a -> c)
