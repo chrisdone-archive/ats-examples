@@ -2,7 +2,10 @@
 
 (* This function is polymorphic over the two types of the tuple. *)
 fun {a,b : t@ype} swap ((x,y) : (a,b)) = (y,x)
-(*         ^ Yes, that is a real keyword. I am not making this up. *)
+(*         ^ That is the "sort" (in Haskell: kind, in Idris: type) of
+             the types a and b. I have no idea why such an ugly name
+             as "t@ype" was chosen.
+*)
 
 (* Basic tuple. *)
 val ab = (10,"foo")

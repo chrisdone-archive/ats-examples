@@ -4,6 +4,9 @@
 fun swapBoxed {a,b : type} ((x,y) : (a,b)) : (b,a) =
   (y,x)
 
+fun swapUnoxed {a,b : t@ype} ((x,y) : (a,b)) : (b,a) =
+  (y,x)
+
 (* List data type. *)
 datatype List (a : type) =
   | Nil (a) of ()
